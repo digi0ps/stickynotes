@@ -10897,7 +10897,7 @@ class StickyPallete extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
 	}
 }
 
-/* unused harmony default export */ var _unused_webpack_default_export = StickyPallete;
+/* harmony default export */ exports["a"] = StickyPallete;
 
 /***/ },
 /* 89 */
@@ -24414,12 +24414,37 @@ module.exports = warning;
 
 
 class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+	constructor(props) {
+		super(props);
+		const hash = window.location.pathname.substring(1);
+		const path = hash === "about" ? "about" : "home";
+		this.state = {
+			path: path
+		};
+		this.toggleMain = this.toggleMain.bind(this);
+	}
+
+	toggleMain(path) {
+		this.setState({
+			path: path
+		});
+	}
+
 	render() {
+		const main = () => {
+			if (this.state.path === "home") {
+				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__sticky_js__["a" /* default */], null);
+			} else if (this.state.path === "about") {
+				window.history.pushState(null, null, "/about");
+				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__about_js__["a" /* default */], null);
+			}
+		};
 		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 			'div',
 			{ className: 'app-body' },
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header_js__["a" /* default */], null),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__about_js__["a" /* default */], null)
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header_js__["a" /* default */], { toggle: this.toggleMain }),
+			main()
 		);
 	}
 }
@@ -24448,7 +24473,9 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 					{ className: "navbar-header top-mar" },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						"a",
-						{ className: "navbar-brand", href: "#" },
+						{ className: "navbar-brand", href: "", onClick: e => {
+								e.preventDefault();this.props.toggle("home");
+							} },
 						"Stickies"
 					)
 				),
@@ -24460,7 +24487,9 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 						null,
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							"a",
-							{ href: "#" },
+							{ href: "", onClick: e => {
+									e.preventDefault();this.props.toggle("about");
+								} },
 							"About",
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								"span",

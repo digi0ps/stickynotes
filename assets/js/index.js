@@ -7,11 +7,37 @@ import '../css/index.css';
 
 
 class App extends React.Component {
+
+	constructor(props){
+		super(props);
+		const hash = window.location.pathname.substring(1);
+		const path = hash === "about" ? "about" : "home";
+		this.state = {
+			path: path
+		}
+		this.toggleMain = this.toggleMain.bind(this);
+	}
+
+	toggleMain(path){
+		this.setState({
+			path: path
+		});
+	}
+
 	render() {
+		const main = ( () => {
+			if(this.state.path === "home"){
+				return <StickyPallete />
+			}
+			else if(this.state.path === "about"){
+				window.history.pushState(null, null, "/about");
+				return <About />
+			}
+		} );
 		return (
 		<div className="app-body">
-		<Header />
-		<About />
+		<Header toggle={this.toggleMain} />
+		{ main() }
 		</div>
 		);
 	}

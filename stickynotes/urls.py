@@ -19,6 +19,7 @@ from main.views import index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', index, name="index")
+    url(r'^$', index, name="index"),
+    url(r'^about/$', index, name="about")
 ] 
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
