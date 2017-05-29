@@ -1,6 +1,6 @@
 import React from 'react';
 import TimeAgo from 'react-timeago';
-import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup'
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import '../css/sticky.css';
 import del from '../svg/delete-icon.svg';
 import done from '../svg/done-icon.svg';
@@ -153,7 +153,6 @@ class StickyNote extends React.Component {
 	}
 
 	saveEdit(){
-		const id = this.refs.edited.id;
 		const newNote = this.refs.edited.value;
 		this.props.saveEdit(id, newNote);
 	}
@@ -250,7 +249,7 @@ class StickyPallete extends React.Component {
 				return note;
 		}
 		let index = stickies.findIndex(test);
-		if(stickies[index].note.trim() === edited)
+		if(stickies[index].note.trim() == edited)
 			return;
 		stickies[index].note = edited;
 		stickies[index].time = Date.now();
