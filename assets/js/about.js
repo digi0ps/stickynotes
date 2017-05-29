@@ -1,4 +1,5 @@
 import React from 'react';
+import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 import '../css/about.css';
 
 
@@ -16,6 +17,12 @@ function AboutPara(props){
 class About extends React.Component {
 	render(){
 		return (
+			<CSSTransitionGroup
+			transitionName="sticky"
+			transitionAppear={true}
+			transitionAppearTimeout={400}
+			transitionEnter={false}
+			transitionLeave={false}>
 			<div className="container">
 			<div className="row about-box">
 			<div className="about-header text-center">
@@ -41,6 +48,7 @@ class About extends React.Component {
 			</div>
 			</div>
 			</div>
+			</CSSTransitionGroup>
 		);
 	}
 }

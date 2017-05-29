@@ -11,7 +11,8 @@ class App extends React.Component {
 	constructor(props){
 		super(props);
 		const hash = window.location.pathname.substring(1);
-		const path = hash === "about" ? "about" : "home";
+		const path = hash === "about/" ? "about" : "home";
+		console.log(hash);
 		this.state = {
 			path: path
 		}
@@ -27,10 +28,11 @@ class App extends React.Component {
 	render() {
 		const main = ( () => {
 			if(this.state.path === "home"){
+				window.history.pushState(null, null, "/");
 				return <StickyPallete />
 			}
 			else if(this.state.path === "about"){
-				window.history.pushState(null, null, "/about");
+				window.history.pushState(null, null, "/about/");
 				return <About />
 			}
 		} );

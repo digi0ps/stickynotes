@@ -10748,7 +10748,6 @@ class StickyNote extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
 	}
 
 	saveEdit() {
-		const id = this.refs.edited.id;
 		const newNote = this.refs.edited.value;
 		this.props.saveEdit(id, newNote);
 	}
@@ -10851,7 +10850,7 @@ class StickyPallete extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
 			if (note.id === id) return note;
 		};
 		let index = stickies.findIndex(test);
-		if (stickies[index].note.trim() === edited) return;
+		if (stickies[index].note.trim() == edited) return;
 		stickies[index].note = edited;
 		stickies[index].time = Date.now();
 		const raw = stateToRaw(stickies);
@@ -24418,7 +24417,8 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 	constructor(props) {
 		super(props);
 		const hash = window.location.pathname.substring(1);
-		const path = hash === "about" ? "about" : "home";
+		const path = hash === "about/" ? "about" : "home";
+		console.log(hash);
 		this.state = {
 			path: path
 		};
@@ -24434,9 +24434,10 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 	render() {
 		const main = () => {
 			if (this.state.path === "home") {
+				window.history.pushState(null, null, "/");
 				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__sticky_js__["a" /* default */], null);
 			} else if (this.state.path === "about") {
-				window.history.pushState(null, null, "/about");
+				window.history.pushState(null, null, "/about/");
 				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__about_js__["a" /* default */], null);
 			}
 		};
@@ -24513,8 +24514,11 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_about_css__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_about_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_about_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_transition_group_CSSTransitionGroup__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_transition_group_CSSTransitionGroup___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_transition_group_CSSTransitionGroup__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_about_css__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__css_about_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__css_about_css__);
+
 
 
 
@@ -24537,90 +24541,99 @@ function AboutPara(props) {
 class About extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 	render() {
 		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-			'div',
-			{ className: 'container' },
+			__WEBPACK_IMPORTED_MODULE_1_react_transition_group_CSSTransitionGroup___default.a,
+			{
+				transitionName: 'sticky',
+				transitionAppear: true,
+				transitionAppearTimeout: 400,
+				transitionEnter: false,
+				transitionLeave: false },
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				'div',
-				{ className: 'row about-box' },
+				{ className: 'container' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					'div',
-					{ className: 'about-header text-center' },
+					{ className: 'row about-box' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						'h3',
-						{ className: 'title-large' },
-						'Stickies'
-					)
-				),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'about-body' },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						AboutPara,
-						null,
+						'div',
+						{ className: 'about-header text-center' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'span',
-							{ className: 'title-medium' },
+							'h3',
+							{ className: 'title-large' },
 							'Stickies'
-						),
-						' is a simple note creation web app. Just create a sticky note anywhere, anytime. No login/signup bullshit. All the notes are saved locally, nothing is sent to the server (ensuring 100% privacy).'
+						)
 					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						AboutPara,
-						null,
-						'Stickies uses ',
+						'div',
+						{ className: 'about-body' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							AboutLink,
-							{ url: 'https://facebook.github.io/react/' },
-							'React'
+							AboutPara,
+							null,
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'span',
+								{ className: 'title-medium' },
+								'Stickies'
+							),
+							' is a simple note creation web app. Just create a sticky note anywhere, anytime. No login/signup bullshit. All the notes are saved locally, nothing is sent to the server (ensuring 100% privacy).'
 						),
-						' as the front-end framework coupled with ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							AboutLink,
-							{ url: 'https://www.djangoproject.com/' },
-							'Django'
+							AboutPara,
+							null,
+							'Stickies uses ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								AboutLink,
+								{ url: 'https://facebook.github.io/react/' },
+								'React'
+							),
+							' as the front-end framework coupled with ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								AboutLink,
+								{ url: 'https://www.djangoproject.com/' },
+								'Django'
+							),
+							' in the backend.  ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								AboutLink,
+								{ url: '' },
+								'Webpack'
+							),
+							' is used for the bundling job with ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								AboutLink,
+								{ url: '' },
+								'Babel'
+							),
+							' for transpiling ES6 JS/JSX to ES5 code. I have used the WebStorage API to save all the notes in the browser.'
 						),
-						' in the backend.  ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							AboutLink,
-							{ url: '' },
-							'Webpack'
+							AboutPara,
+							null,
+							'You can view the source code of this app ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								AboutLink,
+								{ url: 'https://github.com/digi0ps/stickynotes' },
+								'here'
+							),
+							'. Also, you can check my other projects ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								AboutLink,
+								{ url: 'https://github.com/digi0ps' },
+								'here'
+							),
+							'.'
 						),
-						' is used for the bundling job with ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							AboutLink,
-							{ url: '' },
-							'Babel'
-						),
-						' for transpiling ES6 JS/JSX to ES5 code. I have used the WebStorage API to save all the notes in the browser.'
-					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						AboutPara,
-						null,
-						'You can view the source code of this app ',
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							AboutLink,
-							{ url: 'https://github.com/digi0ps/stickynotes' },
-							'here'
-						),
-						'. Also, you can check my other projects ',
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							AboutLink,
-							{ url: 'https://github.com/digi0ps' },
-							'here'
-						),
-						'.'
-					),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						AboutPara,
-						null,
-						'~ ',
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'span',
-							{ className: 'sign' },
-							'Sriram'
+							AboutPara,
+							null,
+							'~ ',
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'span',
+								{ className: 'sign' },
+								'Sriram'
+							)
 						)
 					)
 				)
