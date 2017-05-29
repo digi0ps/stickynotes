@@ -1,0 +1,122 @@
+.sticky-container {
+	margin: 0px;	
+}
+.sticky-root {
+	background-color: #FFEE58;
+	padding: 10px 0 10px 5px;
+	margin-bottom: 15px;
+	box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.45);
+}
+
+.sticky-input {
+	height: 213px;
+	margin-bottom: 15px;
+}
+
+.note-text {
+	height: 170px;
+}
+
+.delete-btn, .done-btn{
+	float: right;
+	background:transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding-bottom: 3px;
+}
+
+textarea {
+	background: transparent;
+	border: none;
+	font-size: 18px;
+	resize: none;
+	height: 170px;
+	line-height: 20px;
+}
+
+textarea:focus {
+	outline: none;
+	border: none;
+}
+
+.note {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.delete-icon, .done-icon{
+	width: 18px;
+	height: 18px;
+}
+
+.time {
+	color: #5d5d5d;
+	padding: none;
+	margin: none;
+	font-size: 12px;
+	display: inline-block;
+	margin-top: 4px;
+}
+
+.delete-all {
+	float: right;
+	border: none;
+	font-size: 18px;
+	outline: none;
+}
+/* Animation */
+.done-appear {
+  opacity: 0.01;
+}
+
+.done-appear.done-appear-active {
+  opacity: 1;
+  transition: opacity 600ms ease-in;
+}
+
+.sticky-enter {
+  opacity: 0.01;
+}
+
+.sticky-enter.sticky-enter-active {
+  opacity: 1;
+  transition: opacity 600ms ease-in;
+}
+
+.sticky-leave {
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+}
+
+.sticky-leave.sticky-leave-active {
+  transform: scale3d(0.01, 0.01, 0.01);
+  opacity: 0.01;
+  transition: opacity 400ms ease-in, transform 400ms ease-in;
+}
+.sticky-appear {
+  transform: scale3d(0.01, 0.01, 0.01);
+  opacity: 0.01;
+}
+
+.sticky-appear.sticky-appear-active {
+  transform: scale3d(1, 1, 1);
+  opacity: 1;
+  transition: opacity 400ms ease-in, transform 400ms ease-in;
+}
+
+@media screen and (min-width: 768px){
+	.sticky-root {
+		margin: 15px;
+		width: 200px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	textarea {
+		font-size: 16px;
+	}
+	.note {
+		font-size: 16px;
+	}
+}

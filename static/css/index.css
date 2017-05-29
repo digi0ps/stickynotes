@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans');
+
+body {
+	font-family: "PT Sans", sans-serif;
+}
+.navbar {
+	background-color: rgba(34, 34, 34, 0.9);
+	border: none;
+	height: 60px;
+	border-radius: 0px;
+	box-shadow: 0px 3px 18px -3px black;
+}
+
+.top-mar {
+	margin-top: 3px;
+}
+
+.navbar-brand {
+	font-family: "Amatic SC", cursive;
+	font-size: 40px;
+	color: white !important;
+}
+
+
+
+a:hover{
+	color: #FFEE58 !important;
+}
+
+.title-small {
+	font-family: "Amatic SC", cursive;
+	font-size: 20px;
+	margin-top: 1px;
+}
+
+@media screen and (max-width: 767px){
+	.nav.navbar-nav.navbar-right{
+		position: absolute;
+		top: 8px;
+		right: 10px;
+	}
+}

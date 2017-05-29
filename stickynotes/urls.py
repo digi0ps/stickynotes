@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+#from django.conf.urls.static import static
+#from django.conf import settings
 from main.views import index
 
 urlpatterns = [
@@ -22,4 +24,4 @@ urlpatterns = [
     url(r'^$', index, name="index"),
     url(r'^about/$', index, name="about")
 ] 
-# + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
