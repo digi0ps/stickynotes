@@ -7,11 +7,12 @@ module.exports = {
 	entry: './assets/js/index',
 	output: {
 		path: path.resolve('./assets/bundles/'),
-		finename: '[name]-[hash].js',
+		publicPath: '/static/bundles/',
+		filename: '[name]-[hash].js',
 	},
 
 	plugins: [
-		new BundleTracker({filename: './webpack-stats.json'}),
+		new BundleTracker({filename: './webpack-stats.js'}),
 	],
 
 	module: {
@@ -28,7 +29,7 @@ module.exports = {
 	},
 
 	resolve: {
-		moduleDirectories: ['node_modules'],
+		modules: ['node_modules'],
 		extensions: ['', '.js', '.jsx']
 	}
 

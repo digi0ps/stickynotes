@@ -1,0 +1,1 @@
+{"status":"done","publicPath":"/static/bundles/","chunks":{"main":[{"name":"main-2133ef61f4fed38a79ad.js","publicPath":"/static/bundles/main-2133ef61f4fed38a79ad.js","path":"/Users/digiops/Desktop/venvs/react-django/stickynotes/assets/bundles/main-2133ef61f4fed38a79ad.js"}]}}
