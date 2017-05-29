@@ -10964,7 +10964,7 @@ exports = module.exports = __webpack_require__(54)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans);", ""]);
 
 // module
-exports.push([module.i, "body {\n\tfont-family: \"PT Sans\", sans-serif;\n}\n.navbar {\n\tbackground-color: rgba(34, 34, 34, 0.9);\n\tborder: none;\n\theight: 60px;\n\tborder-radius: 0px;\n\tbox-shadow: 0px 3px 18px -3px black;\n}\n\n.top-mar {\n\tmargin-top: 3px;\n}\n\n.navbar-brand {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 40px;\n\tcolor: white !important;\n}\na:hover{\n\tcolor: #FFEE58 !important;\n}\n\n.title-small {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 20px;\n\tmargin-top: 1px;\n}\n", ""]);
+exports.push([module.i, "body {\n\tfont-family: \"PT Sans\", sans-serif;\n}\n.navbar {\n\tbackground-color: rgba(34, 34, 34, 0.9);\n\tborder: none;\n\theight: 60px;\n\tborder-radius: 0px;\n\tbox-shadow: 0px 3px 18px -3px black;\n}\n\n.top-mar {\n\tmargin-top: 3px;\n}\n\n.navbar-brand {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 40px;\n\tcolor: white !important;\n}\n\n\n\na:hover{\n\tcolor: #FFEE58 !important;\n}\n\n.title-small {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 20px;\n\tmargin-top: 1px;\n}\n\n@media screen and (max-width: 767px){\n\t.nav.navbar-nav.navbar-right{\n\t\tposition: absolute;\n\t\ttop: 8px;\n\t\tright: 10px;\n\t}\n}\n", ""]);
 
 // exports
 

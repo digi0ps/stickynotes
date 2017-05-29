@@ -20,6 +20,9 @@ body {
 	font-size: 40px;
 	color: white !important;
 }
+
+
+
 a:hover{
 	color: #FFEE58 !important;
 }
@@ -28,4 +31,12 @@ a:hover{
 	font-family: "Amatic SC", cursive;
 	font-size: 20px;
 	margin-top: 1px;
+}
+
+@media screen and (max-width: 767px){
+	.nav.navbar-nav.navbar-right{
+		position: absolute;
+		top: 8px;
+		right: 10px;
+	}
 }
