@@ -203,7 +203,7 @@ class StickyPallete extends React.Component {
 	}
 
 	componentDidMount(){
-		window.history.pushState(null, null, "/sticky")
+		// window.history.pushState(null, null, "/sticky")
 	}
 
 	findMaxId(stickies){
