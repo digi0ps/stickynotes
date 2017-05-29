@@ -1,10 +1,16 @@
 {% load render_bundle from webpack_loader %}
 <!DOCTYPE html>
-<html>
-<head>
-	<title>React Django</title>
-</head>
+<html lang="en">
+  <head>
+  	<title>Stickies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
 <body>
+	<noscript>
+      Nooooo 😭. You don't have Javascript enabled. That's sad for me, cause am completely dependent on that. 😞
+    </noscript>
 	<div id="app-container">
 	</div>
 	{% render_bundle 'main' %}
