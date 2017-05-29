@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+.about-box {
+	margin-top: 10vh;
+	background-color: white;
+	padding: 30px;
+}
+.about-header h3{
+	font-family: "Amatic SC", cursive;
+	color: #FFC107 !important;
+	font-size: 40px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.about-para {
+	font-size: 20px;
+}
+.about-link {
+	color: #222 !important;
+	text-decoration: none;
+	border-bottom: #FFC107 dotted 2px;
+	transition: all 100ms ease-in;
+}
+.about-link:hover {
+	color: #d09f0b !important;
+	text-decoration: none;
+}
+.sign {
+	font-family: "Pacifico", cursive;
+	font-weight: 200;
+	font-size: 25px;
+}

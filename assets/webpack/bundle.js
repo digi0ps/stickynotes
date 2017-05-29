@@ -10897,7 +10897,7 @@ class StickyPallete extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Compon
 	}
 }
 
-/* harmony default export */ exports["a"] = StickyPallete;
+/* unused harmony default export */ var _unused_webpack_default_export = StickyPallete;
 
 /***/ },
 /* 89 */
@@ -10965,7 +10965,7 @@ exports = module.exports = __webpack_require__(54)(undefined);
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Amatic+SC|PT+Sans);", ""]);
 
 // module
-exports.push([module.i, "body {\n\tfont-family: \"PT Sans\", sans-serif;\n}\n.navbar {\n\tbackground-color: rgba(34, 34, 34, 0.9);\n\tborder: none;\n\theight: 60px;\n\tborder-radius: 0px;\n\tbox-shadow: 0px 3px 18px -3px black;\n}\n\n.top-mar {\n\tmargin-top: 3px;\n}\n\n.navbar-brand {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 40px;\n\tcolor: white !important;\n}\n.navbar-brand:hover{\n\tcolor: #FFEE58 !important;\n}\n\n.title-small {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 20px;\n\tmargin-top: 1px;\n}\n", ""]);
+exports.push([module.i, "body {\n\tfont-family: \"PT Sans\", sans-serif;\n}\n.navbar {\n\tbackground-color: rgba(34, 34, 34, 0.9);\n\tborder: none;\n\theight: 60px;\n\tborder-radius: 0px;\n\tbox-shadow: 0px 3px 18px -3px black;\n}\n\n.top-mar {\n\tmargin-top: 3px;\n}\n\n.navbar-brand {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 40px;\n\tcolor: white !important;\n}\na:hover{\n\tcolor: #FFEE58 !important;\n}\n\n.title-small {\n\tfont-family: \"Amatic SC\", cursive;\n\tfont-size: 20px;\n\tmargin-top: 1px;\n}\n", ""]);
 
 // exports
 
@@ -24403,8 +24403,10 @@ module.exports = warning;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_js__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__header_js__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__css_index_css__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__css_index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__css_index_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__about_js__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__css_index_css__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__css_index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__css_index_css__);
+
 
 
 
@@ -24417,7 +24419,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 			'div',
 			{ className: 'app-body' },
 			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__header_js__["a" /* default */], null),
-			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__sticky_js__["a" /* default */], null)
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__about_js__["a" /* default */], null)
 		);
 	}
 }
@@ -24474,6 +24476,176 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 }
 
 /* harmony default export */ exports["a"] = Header;
+
+/***/ },
+/* 211 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_about_css__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__css_about_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__css_about_css__);
+
+
+
+function AboutLink(props) {
+	return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+		'a',
+		{ target: 'blank', className: 'about-link', href: props.url },
+		props.children
+	);
+}
+
+function AboutPara(props) {
+	return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+		'p',
+		{ className: 'about-para' },
+		props.children
+	);
+}
+
+class About extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+	render() {
+		return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+			'div',
+			{ className: 'container' },
+			__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'div',
+				{ className: 'row about-box' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'about-header text-center' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'h3',
+						{ className: 'title-large' },
+						'Stickies'
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					'div',
+					{ className: 'about-body' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						AboutPara,
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'span',
+							{ className: 'title-medium' },
+							'Stickies'
+						),
+						' is a simple note creation web app. Just create a sticky note anywhere, anytime. No login/signup bullshit. All the notes are saved locally, nothing is sent to the server (ensuring 100% privacy).'
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						AboutPara,
+						null,
+						'Stickies uses ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							AboutLink,
+							{ url: 'https://facebook.github.io/react/' },
+							'React'
+						),
+						' as the front-end framework coupled with ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							AboutLink,
+							{ url: 'https://www.djangoproject.com/' },
+							'Django'
+						),
+						' in the backend.  ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							AboutLink,
+							{ url: '' },
+							'Webpack'
+						),
+						' is used for the bundling job with ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							AboutLink,
+							{ url: '' },
+							'Babel'
+						),
+						' for transpiling ES6 JS/JSX to ES5 code. I have used the WebStorage API to save all the notes in the browser.'
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						AboutPara,
+						null,
+						'You can view the source code of this app ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							AboutLink,
+							{ url: 'https://github.com/digi0ps/stickynotes' },
+							'here'
+						),
+						'. Also, you can check my other projects ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							AboutLink,
+							{ url: 'https://github.com/digi0ps' },
+							'here'
+						),
+						'.'
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						AboutPara,
+						null,
+						'~ ',
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'span',
+							{ className: 'sign' },
+							'Sriram'
+						)
+					)
+				)
+			)
+		);
+	}
+}
+
+/* harmony default export */ exports["a"] = About;
+
+/***/ },
+/* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(54)(undefined);
+// imports
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Pacifico);", ""]);
+
+// module
+exports.push([module.i, ".about-box {\n\tmargin-top: 10vh;\n\tbackground-color: white;\n\tpadding: 30px;\n}\n.about-header h3{\n\tfont-family: \"Amatic SC\", cursive;\n\tcolor: #FFC107 !important;\n\tfont-size: 40px;\n\tfont-weight: bold;\n\tmargin-bottom: 20px;\n}\n.about-para {\n\tfont-size: 20px;\n}\n.about-link {\n\tcolor: #222 !important;\n\ttext-decoration: none;\n\tborder-bottom: #FFC107 dotted 2px;\n\ttransition: all 100ms ease-in;\n}\n.about-link:hover {\n\tcolor: #d09f0b !important;\n\ttext-decoration: none;\n}\n.sign {\n\tfont-family: \"Pacifico\", cursive;\n\tfont-weight: 200;\n\tfont-size: 25px;\n}\n", ""]);
+
+// exports
+
+
+/***/ },
+/* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(212);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(87)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../node_modules/css-loader/index.js!./about.css", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!./about.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ }
 /******/ ]);

@@ -20,7 +20,7 @@ body {
 	font-size: 40px;
 	color: white !important;
 }
-.navbar-brand:hover{
+a:hover{
 	color: #FFEE58 !important;
 }
 
