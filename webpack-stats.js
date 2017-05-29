@@ -1,1 +1,1 @@
-{"status":"done","publicPath":"/static/bundles/","chunks":{"main":[{"name":"bundle.js","publicPath":"/static/bundles/bundle.js","path":"/Users/digiops/Desktop/venvs/react-django/stickynotes/assets/bundles/bundle.js"}]}}
+{"status":"done","publicPath":"/static/webpack/","chunks":{"main":[{"name":"bundle.js","publicPath":"/static/webpack/bundle.js","path":"/Users/digiops/Desktop/venvs/react-django/stickynotes/assets/webpack/bundle.js"}]}}

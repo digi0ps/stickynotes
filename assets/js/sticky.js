@@ -125,9 +125,10 @@ class StickyNew extends React.Component {
 	}
 
 	render(){
+		const placeholder = "Throw down your thoughts here...";
 		return (
 		<div className="sticky-input sticky-root bounceIn col-xs-8 col-sm-3 col-md-3 col-xs-offset-2">
-		<textarea ref="newSticky" maxLength={MAX} placeholder="Create a new sticky note" onBlur={(e) => this.handler(e)} onFocus={this.toggleBlur}/>
+		<textarea ref="newSticky" maxLength={MAX} placeholder={placeholder} onBlur={(e) => this.handler(e)} onFocus={this.toggleBlur}/>
 		<DoneButton showDone={this.state.showDone} handler={this.handler}/>
 		</div>
 		);

@@ -7,7 +7,7 @@ module.exports = {
 	entry: './assets/js/index',
 	output: {
 		path: path.resolve('./assets/webpack/'),
-		publicPath: '/static/bundles/',
+		publicPath: '/static/webpack/',
 		filename: 'bundle.js',
 	},
 

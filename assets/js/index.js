@@ -1,24 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import StickyPallete from './sticky.js';
+import Header from './header.js';
+import '../css/index.css';
 
-class HelloWorld extends React.Component {
-	render() {
-		return (
-		<div className="hello">
-		<center>
-		<h1>Hello, Sticky Notes</h1>
-		</center>
-		</div>
-		);
-	}
-}
 
 class App extends React.Component {
 	render() {
 		return (
 		<div className="app-body">
-		<HelloWorld />
+		<Header />
 		<StickyPallete />
 		</div>
 		);
