@@ -6,7 +6,7 @@ import del from '../svg/delete-icon.svg';
 import done from '../svg/done-icon.svg';
 
 // Local Storage Key
-const KEY = "sticky";
+const KEY = "stickyyz";
 // Max characters per note
 const MAX = 170;
 // Functions to store and retrieve object from the localStorage
@@ -111,8 +111,8 @@ class StickyNew extends React.Component {
 		const id = this.props.last + 1;
 		let newStick = `${id}~${value}~${Date.now()}~;`;
 
-		const existing = get(KEY);
-		if (existing === "null"){
+		const existing = rawToState();
+		if (existing.length === 0){
 			set(KEY, newStick);
 		}
 
@@ -165,7 +165,7 @@ class StickyNote extends React.Component {
 		return (
 			<div className="sticky-note">
 			<div className="note-text">
-			<textarea ref="edited" onBlur={this.saveEdit} id={sticky.id} defaultValue={sticky.note} className="textarea" maxLength={MAX} />
+			<textarea ref="edited" onBlur={this.saveEdit} id={"ta"+sticky.id} defaultValue={sticky.note} className="textarea" maxLength={MAX} />
 			</div>
 			<div className="bottomBar">
 			<small className="time"> <TimeAgo date={stickyTime} /> </small>
@@ -276,10 +276,6 @@ class StickyPallete extends React.Component {
 		stateToRaw(stickies);
 		return (
 			<div className="stickyBody container">
-			<div className="stickyHeader">
-			<h1> Sticky Notes </h1>
-			{/* <StickyDeleteAll handler={this.deleteAll} />*/}
-			</div>
 			<div className="sticky-container row">
 				<CSSTransitionGroup
 				transitionName="sticky"
