@@ -4,9 +4,6 @@
 **Stickies** is a simple, On The Go, 170 characters note taking app. No login/signup is needed.
 And all the data is stored in your own browswer and no data is sent to the server. 
 
-## Pictures
-
-
 ## Dev
 React does the main job here, it is coupled with Django in the backend. 
 npm is used for managing the front-end dependencies.
